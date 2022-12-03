@@ -20,7 +20,7 @@ object App
     AppOpts.solve.map(solve)
 
   def solve(solve: AppOpts.Solve): IO[ExitCode] =
-    input.Reader.getInputForDay(solve.day).flatMap { input =>
+    input.Reader.getInputForDay(solve).flatMap { input =>
       val puzzle = solve.day match {
         case 1 =>
           IO(Day1(input))
