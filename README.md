@@ -7,7 +7,7 @@ The solutions are written in Scala 3
 There's a VS Code workspace and for each available solution it's possible to simply modify the
 run configuration to solve for the desired day.
 
-Alternatively you can run the the app, e.g. via `sbt`
+Alternatively you can run the app, e.g. via `sbt`
 ```
 sbt run solve <day>
 ```
