@@ -1,0 +1,43 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.watcherExclude": {
+            "**/.bloop": true,
+            "**/.metals": true,
+            "**/target": true,
+            "**/out": true,
+            "core/Data": true
+        },
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "files.exclude": {
+            "**/.bloop": true,
+            "**/.git": true,
+            "**/.metals": true,
+            "**/.bsp": true,
+            "**/target": true,
+            "**/out": true
+        }
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "scala",
+                "request": "launch",
+                "name": "Main",
+                "mainClass": "app.App",
+                "env": {},
+                "args": [
+                    "solve",
+                    "3"
+                ]
+            },
+        ],
+        "compounds": []
+    }
+}
