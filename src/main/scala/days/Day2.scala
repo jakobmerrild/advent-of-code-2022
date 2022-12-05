@@ -96,13 +96,14 @@ final case class Day2(input: String) extends Puzzle {
         } yield Combat2(theirs, outcome)
       case _ => None
 
-  override def solve: Int =
+  override def solve: String =
     input
       .split("\n")
       .flatMap(readCombat)
       .map { case Combat(theirs, mine) => mine.fight(theirs) + mine.value }
       .sum
-  override def solve2: Int =
+      .toString
+  override def solve2: String =
     input
       .split("\n")
       .flatMap(readCombat2)
@@ -110,4 +111,5 @@ final case class Day2(input: String) extends Puzzle {
         theirs.choose(outcome).value + outcome.value
       }
       .sum
+      .toString
 }

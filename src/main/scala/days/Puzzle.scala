@@ -4,6 +4,6 @@ import cats.effect.ExitCode
 import cats.effect.IO
 
 trait Puzzle {
-  def solve: Int
-  def solve2: Int
+  def solve: String
+  def solve2: String
 }

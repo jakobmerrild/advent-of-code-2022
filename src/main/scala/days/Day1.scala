@@ -13,9 +13,9 @@ final case class Day1(input: String) extends Puzzle {
   private lazy val bags: Array[Bag] =
     input.split("\n\n").map { bag => Bag(bag.split("\n")) }
 
-  override def solve: Int =
-    bags.maxOption.map(_.totalCalories).getOrElse(0)
+  override def solve: String =
+    bags.maxOption.map(_.totalCalories).getOrElse(0).toString
 
-  override def solve2: Int =
-    bags.sorted.reverse.take(3).map(_.totalCalories).sum
+  override def solve2: String =
+    bags.sorted.reverse.take(3).map(_.totalCalories).sum.toString
 }

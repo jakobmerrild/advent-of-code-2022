@@ -16,9 +16,9 @@ final case class Day3(input: String) extends Puzzle {
       item.toInt - 96 // lower case ascii char starts at 'a' = 97
     else
       item.toInt - 38 // upper case ascii char starts at 'A' = 65 (-38 sets value to 27)
-  override def solve: Int =
-    input.split("\n").map(Rucksack.apply).map(_.duplicate.fold(0)(itemPriority)).sum
-  override def solve2: Int =
+  override def solve: String =
+    input.split("\n").map(Rucksack.apply).map(_.duplicate.fold(0)(itemPriority)).sum.toString
+  override def solve2: String =
     input
       .split("\n")
       .grouped(3)
@@ -31,4 +31,5 @@ final case class Day3(input: String) extends Puzzle {
           .fold(0)(itemPriority)
       }
       .sum
+      .toString
 }

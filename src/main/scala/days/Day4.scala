@@ -31,16 +31,18 @@ final case class Day4(input: String) extends Puzzle {
       case _ => None
     }
   }
-  override def solve: Int =
+  override def solve: String =
     input
       .split("\n")
       .flatMap(readLine)
       .filter { case (first, second) => first.contains(second) || second.contains(first) }
       .size
-  override def solve2: Int =
+      .toString
+  override def solve2: String =
     input
       .split("\n")
       .flatMap(readLine)
       .filter { case (first, second) => first.overLaps(second) }
       .size
+      .toString
 }
