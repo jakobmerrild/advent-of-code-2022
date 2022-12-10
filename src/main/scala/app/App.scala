@@ -38,14 +38,16 @@ object App
           IO(Day8(input))
         case 9 =>
           IO(Day9(input))
+        case 10 =>
+          IO(Day10(input))
         case _ =>
           IO.raiseError[Puzzle](new Exception(s"Unsupported day: ${solve.day}"))
       }
 
       puzzle
         .flatMap { p =>
-          IO(println(s"First: ${p.solve}")) *>
-            IO(println(s"Second: ${p.solve2}"))
+          IO(println(s"First:\n${p.solve}")) *>
+            IO(println(s"Second:\n${p.solve2}"))
         }
         .as(ExitCode.Success)
     }
