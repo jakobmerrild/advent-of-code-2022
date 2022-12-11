@@ -34,6 +34,8 @@ object App
           IO(Day5(input))
         case 6 =>
           IO(Day6(input))
+        case 7 =>
+          IO(Day7(input))
         case 8 =>
           IO(Day8(input))
         case 9 =>
